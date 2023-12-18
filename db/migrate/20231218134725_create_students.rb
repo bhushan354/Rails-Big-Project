@@ -11,7 +11,11 @@ class CreateStudents < ActiveRecord::Migration[7.1]
 end
 
 # avoid creating migration manually instead use this following command :
+# this commands creates a model (also migration file  and test file)
 # rails generate model model_name
 
 # to run migration , command is  :
 # rails db:migrate
+
+# to revert the last migration , command is : 
+# rails db:migrate 
