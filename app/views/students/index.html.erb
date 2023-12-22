@@ -8,4 +8,15 @@
         <th>Email</th>
     </tr>
   </thead>
+
+  <tbody>
+     <% @students.each do |student| %>
+     <tr>
+        <td> <%= student.first_name %> </td>
+        <td> <%= student.last_name %> </td>
+        <td> <%=student.email %> </td>
+     </tr>
+     <% end %>
+  </tbody>
+
 </table>
