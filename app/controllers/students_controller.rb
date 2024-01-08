@@ -22,6 +22,12 @@ class StudentsController < ApplicationController
             email: params[:student][:email]
         )    
         # saving student to database
-        @student.save
+
+        if @student.save
+            redirect_to students_path
+        else
+            render :new
+        end
+        
     end
 end
