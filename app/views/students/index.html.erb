@@ -1,0 +1,24 @@
+<h1>Listing Students</h1>
+
+<table>
+  <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- down here there is no '%=' operator means you are evaluating something  -->
+     <% @students.each do |student| %>
+     <tr>
+      <!-- the '=' operator here '%=' means that you are displaying some output -->
+        <td> <%= student.first_name %> </td>
+        <td> <%= student.last_name %> </td>
+        <td> <%=student.email %> </td>
+     </tr>
+     <% end %>
+  </tbody>
+
+</table>
