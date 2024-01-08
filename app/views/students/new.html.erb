@@ -1,0 +1,26 @@
+<!-- we are using form builder which will require minimal amount of code and will follow rails convention -->
+
+<h1>New Student</h1>
+
+<%= form_with model: @Student do |form| %>
+
+    <div>
+        <%= form.label :first_name_is_this %><br /> 
+        <%= form.text_field :first_name %>
+        <!-- this '.text_field' is input method for expecting the input type -->
+    </div>
+
+    <div>
+        <%= form.label :last_name %> <br />
+        <%= form.text_field :last_name %>
+    </div>
+
+    <div>
+        <%= form.label :email %> <br />
+        <%= form.text_field :email %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
